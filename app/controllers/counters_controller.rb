@@ -4,11 +4,7 @@ class CountersController < ApplicationController
   # GET /counters
   # GET /counters.json
   def index
-    if params[:sort]
-      @counters = Counter.order(stars: :desc)
-    else
-      @counters = Counter.all
-    end
+    @counters = Counter.all
   end
 
   # GET /counters/1
@@ -21,10 +17,6 @@ class CountersController < ApplicationController
     @counter = Counter.new
   end
 
-  def landing
-	@counter = Counter.last
-  end
-  
   # GET /counters/1/edit
   def edit
   end
