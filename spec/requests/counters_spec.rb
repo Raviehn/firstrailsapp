@@ -1,11 +1,10 @@
 require 'spec_helper'
 
 describe "Counters" do
-  describe "GET /counters" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get counters_path
-      response.status.should be(200)
+  describe "teams" do
+  it "shows the teams" do
+	visit counters_path
+	expect(page).to have_content 'Listing teams'
     end
   end
 end
