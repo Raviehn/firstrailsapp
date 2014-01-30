@@ -17,6 +17,10 @@ class CountersController < ApplicationController
     @counter = Counter.new
   end
 
+  def landing
+	@counter = Counter.last
+  end
+  
   # GET /counters/1/edit
   def edit
   end
