@@ -2,7 +2,13 @@
 
 FactoryGirl.define do
   factory :counter do
-    team "MyString"
-    goals 1
+    team 'BVB'
+    goals 100000
   end
+  
+  factory :pauli, class: Counter do
+	team 'FCSP'
+	goals 23423
+  end
+  
 end
