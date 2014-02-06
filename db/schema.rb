@@ -11,11 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140117141044) do
+ActiveRecord::Schema.define(version: 20140206115341) do
 
   create_table "counters", force: true do |t|
     t.string   "team"
     t.integer  "goals"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "team_id"
+  end
+
+  create_table "teams", force: true do |t|
+    t.string   "full"
+    t.string   "short"
+    t.integer  "founded"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

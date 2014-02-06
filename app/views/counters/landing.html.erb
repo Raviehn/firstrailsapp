@@ -1,4 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<p> Start page </p>
+<p> Greetings Sir. </p>
 <p>Latest Team: <%= @counter.team %></p>
+
+<%= form_for(@counter) do |f| %>
+  <% if @counter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@counter.errors.count, "error") %> prohibited this counter from being saved:</h2>
+
+      <ul>
+      <% @counter.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :team %><br>
+    <%= f.text_field :team %>
+  </div>
+  <div class="field">
+    <%= f.label :goals %><br>
+    <%= f.number_field :goals %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
