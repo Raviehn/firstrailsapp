@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Full:</strong>
+  <%= @team.full %>
+</p>
+
+<p>
+  <strong>Short:</strong>
+  <%= @team.short %>
+</p>
+
+<p>
+  <strong>Founded:</strong>
+  <%= @team.founded %>
+</p>
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>
+
+
+<%= render 'shared/list_counters' %>
