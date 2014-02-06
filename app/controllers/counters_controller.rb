@@ -73,6 +73,6 @@ class CountersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def counter_params
-      params.require(:counter).permit(:team, :goals)
+      params.require(:counter).permit(:team_id, :goals)
     end
 end

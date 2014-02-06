@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :team %><br>
-    <%= f.text_field :team %>
+    <%= f.collection_select( :team_id, Team.all, :id, :list_name) %>
   </div>
   <div class="field">
     <%= f.label :goals %><br>
